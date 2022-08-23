@@ -1,0 +1,2 @@
+module MicropostDetailsHelper
+end

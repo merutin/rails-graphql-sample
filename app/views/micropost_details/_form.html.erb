@@ -1,0 +1,27 @@
+<%= form_with(model: micropost_detail) do |form| %>
+  <% if micropost_detail.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(micropost_detail.errors.count, "error") %> prohibited this micropost_detail from being saved:</h2>
+
+      <ul>
+        <% micropost_detail.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :content, style: "display: block" %>
+    <%= form.text_area :content %>
+  </div>
+
+  <div>
+    <%= form.label :micropost_id, style: "display: block" %>
+    <%= form.number_field :micropost_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
