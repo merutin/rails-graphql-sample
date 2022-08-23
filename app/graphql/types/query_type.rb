@@ -17,5 +17,9 @@ module Types
     def users
       User.all
     end
+    field :microposts, [Types::MicropostType], null: false
+    def microposts
+      Micropost.all
+    end
   end
 end
