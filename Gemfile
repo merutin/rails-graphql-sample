@@ -73,3 +73,4 @@ end
 
 gem 'graphql'
 gem 'graphiql-rails'
+gem 'graphql-batch'

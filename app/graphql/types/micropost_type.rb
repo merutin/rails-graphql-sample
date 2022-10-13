@@ -9,5 +9,9 @@ module Types
     field :updated_at, GraphQL::Types::ISO8601DateTime, null: false
     field :micropost_details, [Types::MicropostDetailType]
     field :user, Types::UserType
+
+    def micropost_details
+      Loaders::AssociationLoader.for(Micropost, :micropost_details).load(object)
+    end
   end
 end

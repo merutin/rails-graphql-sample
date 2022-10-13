@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  memo: MyString
+  address: MyString
+  user_id: 1
+
+two:
+  memo: MyString
+  address: MyString
+  user_id: 1

@@ -13,10 +13,15 @@ module Types
     def test_field
       "Hello World!"
     end
-    field :users, [Types::UserType], null: false
-    def users
-      User.all
-    end
+    # field :users, [Types::UserType], null: false
+    field :users, resolver: Resolvers::UsersResolver
+    # def users
+      # User.all
+      # [User.find('1').reload_user_detail]
+      # User.all.map{|user|
+      #   user.user_detail
+      # }
+    # end
     field :microposts, [Types::MicropostType], null: false
     def microposts
       Micropost.all
